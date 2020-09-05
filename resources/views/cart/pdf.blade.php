@@ -34,7 +34,7 @@
 </head>
 <body>
 
-<h1 class="text-center"><b>Tienda MIGUEL SRL</b></h1>
+<h1 class="text-center"><b>Super Clear</b></h1>
 <h2 class="text-center" >Monteagudo 435 - San Miguel de Tucumán</h2>
 <h2>Factura N°{{$factura->id}} -  Emitido: {{$factura->created_at}}</h2>
  <div class="card mb-3">

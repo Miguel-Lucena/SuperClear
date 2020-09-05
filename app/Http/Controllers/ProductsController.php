@@ -103,9 +103,8 @@ class ProductsController extends Controller
     public function edit(Product $product)
     {
         $rubros = Rubro::get();
-        $product_rubro = $product->rubro;
-       //dd($product_rubro);
-        return view('admin.products.edit', ['product'=> $product, 'rubros'=>$rubros, 'product_rubro'=> $product_rubro]);
+      
+        return view('admin.products.edit', ['product'=> $product, 'rubros'=>$rubros]);
     }
 
     /**
@@ -151,7 +150,7 @@ class ProductsController extends Controller
         $product->view=$request->view;
         $product->save();
     }
-        $product->save();
+        //$product->save();
         return redirect('/products');
     }
 

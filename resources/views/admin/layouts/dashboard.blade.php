@@ -150,7 +150,6 @@
   <script src="/js/admin/demo/datatables-demo.js"></script>
   <script src="/js/admin/demo/chart-area-demo.js"></script>
 
-  @yield('js_post_page')
   @yield('js_user_page')
   @yield('js_role_page')
   @yield('js_product_page')

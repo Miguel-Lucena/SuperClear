@@ -1,13 +1,3 @@
-  <!--Chatbot-->
-  <div class="col-md-8">
-    <iframe
-    allow="microphone;"
-    width="350"
-    height="430"
-    src="https://console.dialogflow.com/api-client/demo/embedded/309002f7-552b-40f9-bf73-ba786cd33b04">
-    </iframe>
-  </div>
-
   <!-- Footer -->
   <footer>
     <div class="container">

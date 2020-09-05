@@ -43,7 +43,7 @@
             <select class="rubro form-control" name="rubro" id="rubro">
                 <option value="">Selecciones el rubro...</option>
                 @foreach($rubros as $rubro)
-                    <option value="{{$rubro->id}}" {{$product->rubro == null || $rubro->name != $product_rubro->name ? "" : "selected" }}>{{$rubro->name}}</option>
+                    <option value="{{$rubro->id}}" {{$product->rubro == null || $rubro->name != $product->rubro->name ? "" : "selected" }}>{{$rubro->name}}</option>
                 @endforeach
             </select>
     </div>

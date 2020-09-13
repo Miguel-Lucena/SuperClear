@@ -69,3 +69,4 @@ Route::get('/cart/detail_orders/pdf', ['middleware'=>'auth', 'uses'=> 'CartContr
 //fin de las rutas para el post
 
 //las de abajo estan por las dudas estaban en el otro
+Route::resource('providers', 'ProvidersController');

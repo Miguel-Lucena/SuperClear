@@ -22,6 +22,11 @@
 
   <!--ckEditor 4-->
   <script src="https://cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+  
+  <!-- Para que funcione lo de provincia localidad-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+
 </head>
 
 <body id="page-top">
@@ -60,6 +65,11 @@
           <a class="nav-link" href="/users">
             <i class="fas fa-fw fa-table"></i>
             <span>Usuarios</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/providers">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Proveedores</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/rubros">
@@ -137,8 +147,8 @@
   <!-- Core plugin JavaScript-->
   <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
 
-  <!-- Page level plugin JavaScript-->
-  <script src="/vendor/chart.js/Chart.min.js"></script>
+  <!-- Page level plugin JavaScript
+  <script src="/vendor/chart.js/Chart.min.js"></script>-->
   <script src="/vendor/datatables/jquery.dataTables.js"></script>
   <script src="/vendor/datatables/dataTables.bootstrap4.js"></script>
 
@@ -150,9 +160,13 @@
   <script src="/js/admin/demo/datatables-demo.js"></script>
   <script src="/js/admin/demo/chart-area-demo.js"></script>
 
+
+
   @yield('js_user_page')
   @yield('js_role_page')
   @yield('js_product_page')
+  @yield('js_province_page')
+  
  
 </body>
 

@@ -55,7 +55,15 @@
                 <option value="0">No</option>
             </select>
     </div>
-   
+    <div class="form-group">
+        <label for="foreign-provider">Proveedor</label>
+            <select class="provider form-control" name="provider" id="provider">
+                <option value="">Selecciones el Proveedor...</option>
+                @foreach($providers as $provider)
+                    <option value="{{$provider->id}}">{{$provider->name}}</option>
+                @endforeach
+            </select>
+    </div>
     <div class="form-group pt-2">
         <input class="btn btn-primary" type="submit" value="Crear">
     </div>

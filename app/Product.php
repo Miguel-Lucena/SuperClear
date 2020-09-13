@@ -12,6 +12,10 @@ class Product extends Model
     {
         return $this->belongsTo('App\Rubro');
     }
+    public function provider()
+    {
+        return $this->belongsTo('App\Provider');
+    }
 
     public function order_item()
     {

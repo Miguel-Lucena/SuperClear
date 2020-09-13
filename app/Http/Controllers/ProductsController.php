@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use App\Rubro;
+use App\Provider;
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller
@@ -28,7 +29,9 @@ class ProductsController extends Controller
     {
 
         $rubros = Rubro::all(); 
-        return view('admin.products.create', ['rubros'=>$rubros]);
+        $providers = Provider::all();
+
+        return view('admin.products.create', ['rubros'=>$rubros, 'providers'=>$providers]);
     }
 
     /**
@@ -74,9 +77,10 @@ class ProductsController extends Controller
        
         //$product->save();
 
-        if($request->rubro!=null && $request->view!=null){
+        if($request->rubro!=null && $request->view!=null && $request->provider!=null){
             $product->rubro_id=$request->rubro;
             $product->view = $request->view;
+            $product->provider_id=$request->provider;
             $product->save();
         }
         
@@ -103,8 +107,9 @@ class ProductsController extends Controller
     public function edit(Product $product)
     {
         $rubros = Rubro::get();
+        $providers = Provider::all();
       
-        return view('admin.products.edit', ['product'=> $product, 'rubros'=>$rubros]);
+        return view('admin.products.edit', ['product'=> $product, 'rubros'=>$rubros, 'providers'=>$providers]);
     }
 
     /**
@@ -145,9 +150,10 @@ class ProductsController extends Controller
         $product->price = $request->price;
         $product->quantity=$request->quantity;
        //primer email es de la DB el segundo email es del Formunario name='email'
-       if($request->rubro!=null && $request->view!=null){
+       if($request->rubro!=null && $request->view!=null && $request->provider!=null){
         $product->rubro_id=$request->rubro;
         $product->view=$request->view;
+        $product->provider_id=$request->provider;
         $product->save();
     }
         //$product->save();

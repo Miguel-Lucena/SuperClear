@@ -29,6 +29,7 @@
                   <th>Rubro</th>
                   <th>Stock</th>
                   <th>Visible</th>
+                  <th>Proveedor</th>
                   <th>Herramientas</th>
                 </tr>
               </thead>
@@ -42,6 +43,7 @@
                     <th>Rubro</th>
                     <th>Stock</th>
                     <th>Visible</th>
+                    <th>Proveedor</th>
                     <th>Herramientas</th>
                   </tr>
               </tfoot>
@@ -57,6 +59,7 @@
                     <td>{{$product->rubro->name}}</td>
                     <td>{{$product->quantity}}</td>
                     <td>{{$product->view == 1  ? "Si" : "No" }}</td>
+                    <td>{{$product->provider->name}}</td>
                     <td>
                    {{-- <a href="/products/{{$product->id}}"><i class="fa fa-eye"></i></a> --}}
                     <a href="/products/{{$product->id}}/edit"><i class="fa fa-edit"></i></a>

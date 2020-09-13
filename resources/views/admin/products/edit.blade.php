@@ -58,7 +58,15 @@
                 <option value="0" {{$product->view == 1  ? "" : "selected" }} >No</option>
             </select>
     </div>
-  
+    <div class="form-group">
+        <label for="foreign">Proveedor</label>
+            <select class="provider form-control" name="provider" id="provider">
+                <option value="">Selecciones el Proveedor...</option>
+                @foreach($providers as $provider)
+                    <option value="{{$provider->id}}" {{$product->provider == null || $provider->name != $product->provider->name ? "" : "selected" }}>{{$provider->name}}</option>
+                @endforeach
+            </select>
+    </div>
   
 
 
